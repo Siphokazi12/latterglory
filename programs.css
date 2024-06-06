@@ -1,0 +1,175 @@
+.paragraph1{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.logo{
+	width:300px;
+	height:auto;
+	margin-right:auto;
+	margin-left: auto;
+}
+
+.pages{
+	margin-right: auto;
+	margin-left: auto;
+	font-size: 25px;
+}
+
+.pages a{
+  padding-left: 10px;
+  font-family: "Nerko One", cursive;
+  color:black;
+}
+
+.pages a:hover{
+  font-size: 45px;
+  color: blueviolet;
+}
+
+.top{
+  display: flex;
+  align-items: center;
+	justify-content: center;
+}
+
+.flower{
+  width:70px;
+  height:inherit;
+}
+
+#programs{
+  text-align: center;
+  font-size: 30px;
+  font-family: "Nerko One", cursive;
+}
+
+.infantSection{
+  display: flex;
+  padding-left:250px;
+  align-items: center;
+  align-content:center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 100px;
+  margin-bottom:100px;
+}
+
+#infantpng{
+  margin-right: 50%;
+  height:400px;
+  width:auto;
+}
+
+#infantparagraph{
+width: 500px;
+text-align: justify;
+font-size: 23px;
+padding-left: 20px;
+}
+
+.babySection{
+  display: flex;
+  padding-left:200px;
+  align-items: center;
+  align-content:center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top:100px;
+  margin-bottom: 100px;
+}
+#babyparagraph{
+width: 500px;
+text-align: justify;
+font-size: 23px;
+padding-right: 20px;
+}
+
+#babypng{
+  margin-right: 50%;
+  height:auto;
+  width:450px;
+}
+
+.toddlerSection{
+  display: flex;
+  padding-left:200px;
+  align-items: center;
+  align-content:center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+#toddlerparagraph{
+width: 500px;
+text-align: justify;
+font-size: 23px;
+padding-left:20px;
+}
+
+#toddlerpng{
+  margin-left: 50px;
+  height:auto;
+  width: 450px;
+}
+
+.preschoolSection{
+  display: flex;
+  padding-left:200px;
+  align-items: center;
+  align-content:center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+#preschoolparagraph{
+width: 500px;
+text-align:justify;
+font-size: 23px;
+padding-right: 20px;
+}
+
+#preschoolpng{
+  margin-right: 50%;
+  height:auto;
+  width: 450px;
+}
+.graderSection{
+  display: flex;
+  padding-left:200px;
+  align-items: center;
+  align-content:center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+#graderparagraph{
+width: 500px;
+text-align:justify;
+font-size: 23px;
+padding-left: 20px;
+}
+
+#graderpng{
+  margin-right: 50%;
+  height:auto;
+  width:450px;
+}
+
+.lastphoto{
+	width: 900px;
+	height: inherit;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+body{
+	  background-image:url("purplebackground.png");
+	  background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}

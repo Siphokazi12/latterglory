@@ -1,0 +1,125 @@
+<html>
+    <header>
+    <meta charset="UTF-8">
+    <title>Registration:</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nerko+One&family=Permanent+Marker&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    
+    <style>
+
+.logo{
+            width:300px;
+	        height:auto;
+            display: block;
+            margin-left: auto;
+            margin-right:auto;
+        }
+
+        .reg{
+            font-family: "nerko one";
+            font-size: 25px;
+            text-align: center;
+        }
+
+        form{
+            text-align: center;
+        }
+
+        button{
+            margin-top: 25px;
+            border-radius: 25px;
+            padding: 15px 32px;
+            border: none;
+            color: rgb(0, 0, 0);
+        }
+
+        input[type=text]{
+            background: transparent;
+            border: none;
+            border-bottom: 2px solid rgb(0, 0, 0);
+            padding: 2px;
+            margin-bottom: 10px;
+        }
+
+        input[type=tel]{
+            background: transparent;
+            border: none;
+            border-bottom: 2px solid rgb(0, 0, 0);
+            padding: 2px;
+            margin-bottom: 10px;
+        }       
+        
+        input[type=number]{
+            background: transparent;
+            border: none;
+            border-bottom: 2px solid rgb(0, 0, 0);
+            padding: 2px;
+            margin-bottom: 10px;
+        } 
+        
+        body{
+	background-image:url("background.png");
+	background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+
+    </style>
+    </header>
+
+    <body>
+        
+        <div class= paragraph1>
+            <img class="logo" src="logo.png" alt="logo">
+        </div>
+    
+    <div class="heading">
+    
+    <div>
+        <h4 class="Reg">Registration</h4>
+    </div>
+    </div>
+
+    <form action="register5.html" >
+        <h4>Parent's Information</h4>
+
+	<div class="Parents">
+		<div class="Father">
+			<h4  style="font-family: Nerko One; font-size: 30px;">Father's Information</h5>
+			
+			<input type="text" name="Name" id="Name" placeholder="Enter Name" style="width:600px; height:30px"required=""><br>
+
+			<input type="text" name="lastName" id="lastName" placeholder="Enter Last Name" style="width:600px; height:30px"required=""><br>
+
+			<input type="number" name="ID" id="ID" placeholder="Enter ID Number" style="width:600px; height:30px"required=""><br>
+
+			<input type="text" name="Occupation" id="Occupation" placeholder="Enter Occupation" style="width:600px; height:30px"required=""><br>
+
+			<input type="text" name="CompanyName" id="CompanyName" placeholder="Enter Company Name" style="width:600px; height:30px"required=""><br>
+
+			<input type="tel" name="WorkTell" id="WorkTell" placeholder="Enter Work Telephone Number" style="width:600px; height:30px"required=""><br>
+
+			<input type="tel" name="HomeTell" id="HomeTell" placeholder="Enter Home Telephone Number" style="width:600px; height:30px"required=""><br>
+
+			<input type="tel" name="Cell" id="Cell" placeholder="Enter Cellphone Number" style="width:600px; height:30px"required=""><br>
+
+			<input type="text" name="Status" id="Status" placeholder="Married/ Single" style="width:600px; height:30px"required=""><br>
+
+			<input type="text" name="HomeAddress" id="HomeAddress" placeholder="Enter Home Address" rows="200" cols="100"style="width:600px; height:100px"required=""></textarea><br>
+
+			<input type="text" name="PostalAddress" id="PostalAddress" placeholder="Enter Postal Address" rows="200" cols="100"style="width:600px; height:100px"required=""></textarea><br>
+		</div>
+
+        
+    <button onclick="window.location.href='/register5.html'" >Next</button>
+    <button type="reset">Reset</button>
+
+    </form>
+
+    </body>
+
+</html>
+
+		

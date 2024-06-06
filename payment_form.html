@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Payment Form</title>
+    <style>
+        /* Styles for the payment form */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+
+        #payment-form, #upload-form {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        #payment-form input[type="text"], 
+        #payment-form button, 
+        #upload-form input[type="file"], 
+        #upload-form button {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+
+        #payment-form input[type="text"]:focus, 
+        #upload-form input[type="file"]:focus {
+            border-color: #007bff;
+            outline: none;
+        }
+
+        #payment-form button, 
+        #upload-form button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            font-size: 18px;
+            transition: background-color 0.3s ease;
+        }
+
+        #payment-form button:hover, 
+        #upload-form button:hover {
+            background-color: #0056b3;
+        }
+
+        #card-element {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin-bottom: 15px;
+        }
+
+        #card-errors {
+            color: #fa755a;
+            margin-top: -10px;
+            margin-bottom: 10px;
+        }
+
+        h3 {
+            margin: 20px 0;
+            text-align: center;
+        }
+    </style>
+    <script src="https://js.stripe.com/v3/"></script>
+</head>
+<body>
+    <form action="thankyou.html" id="payment-form">
+        <p>Registration Fee:</p>
+        <p>R50</p>
+        <input type="text" name="cardholder_name" placeholder="Cardholder Name" required>
+        <div id="card-element"><!-- A Stripe Element will be inserted here. --></div>
+        <div id="card-errors" role="alert"></div>
+        <button type="submit">Pay Now</button>
+    </form>
+
+    <h3>or</h3>
+
+    <form action="thankyou.html" enctype="multipart/form-data" id="upload-form">
+        <h2>Upload Proof of Payment</h2>
+        <label for="image">Image file</label>
+        <input type="file" id="image" name="image" required>
+        <button type="submit">Upload File</button>
+    </form>
+
+    <script>
+        var stripe = Stripe('pk_test_51PLpLwRpD1pZV8tLUBmyxx8tH4j70CbilFSoXYHYLKtpXGM4ybPiYyaV2h7Z1OI2RVwH4kwmsQpDcN6Ahm52p1RL00PGSSTTFb');
+        var elements = stripe.elements();
+
+        var style = {
+            base: {
+                color: '#32325d',
+                lineHeight: '24px',
+                fontFamily: '"Helvetica Neue", Helvetica, sans-serif',
+                fontSmoothing: 'antialiased',
+                fontSize: '16px',
+                '::placeholder': {
+                    color: '#aab7c4'
+                }
+            },
+            invalid: {
+                color: '#fa755a',
+                iconColor: '#fa755a'
+            }
+        };
+
+        var card = elements.create('card', {style: style});
+        card.mount('#card-element');
+
+        var form = document.getElementById('payment-form');
+        form.addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            stripe.createToken(card).then(function(result) {
+                if (result.error) {
+                    var errorElement = document.getElementById('card-errors');
+                    errorElement.textContent = result.error.message;
+                } else {
+                    var hiddenInput = document.createElement('input');
+                    hiddenInput.setAttribute('type', 'hidden');
+                    hiddenInput.setAttribute('name', 'stripeToken');
+                    hiddenInput.setAttribute('value', result.token.id);
+                    form.appendChild(hiddenInput);
+
+                    form.submit();
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>

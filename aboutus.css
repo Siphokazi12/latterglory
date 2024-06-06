@@ -1,0 +1,79 @@
+.paragraph1{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.logo{
+	width:300px;
+	height:auto;
+	margin-right:auto;
+	margin-left: auto;
+}
+
+.pages{
+	margin-right: auto;
+	margin-left: auto;
+	font-size: 25px;
+}
+
+.pages a{
+  padding-right: 10px;
+  font-family: "Nerko One", cursive;
+  color:black;
+}
+
+.pages a:hover{
+ font-size: 45px;
+ color: orange;
+}
+
+.heading{
+  display: flex;
+  align-items: center;
+	justify-content: center;
+}
+.flower{
+  width:70px;
+  height:inherit;
+}
+
+.aboutus{
+  text-align: center;
+  font-size: 30px;
+  font-family: "Nerko One", cursive;
+  color: rgb(255, 106, 0);
+}
+
+.ourcrecheheading{
+  font-family: "Nerko One", cursive;
+}
+
+.ourcreche{
+  font-size: 25px;
+  text-align: center;
+  padding-left:200px;
+  padding-right: 200px;
+}
+
+.aboutpicture{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width:50%;
+  height: auto;
+}
+
+.lastphoto{
+	width: 900px;
+	height: inherit;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+body{
+	background-image:url("organgebackground.png");
+	background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}

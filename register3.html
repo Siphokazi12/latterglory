@@ -1,0 +1,88 @@
+<html>
+    <header>
+    <meta charset="UTF-8">
+    <title>Registration:</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nerko+One&family=Permanent+Marker&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+
+    <style>
+        .logo{
+            width:300px;
+	        height:auto;
+            display: block;
+            margin-left: auto;
+            margin-right:auto;
+        }
+
+        .reg{
+            font-family: "nerko one";
+            font-size: 25px;
+            text-align: center;
+        }
+
+        form{
+            text-align: center;
+        }
+
+        button{
+            margin-top: 25px;
+            border-radius: 25px;
+            padding: 15px 32px;
+            border: none;
+            color: rgb(0, 0, 0);
+        }
+
+        input[type=text]{
+            background: transparent;
+            border: none;
+            border-bottom: 2px solid rgb(0, 0, 0);
+            padding: 2px;
+        }
+
+        input[type=tel]{
+            background: transparent;
+            border: none;
+            border-bottom: 2px solid rgb(0, 0, 0);
+            padding: 2px;
+        }
+
+        body{
+	background-image:url("background.png");
+	background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+    </style>
+    </header>
+
+    <body>
+        
+        <div class= paragraph1>
+            <img class="logo" src="logo.png" alt="logo">
+        </div>
+    
+    <div class="heading">
+    
+    <div>
+        <h4 class="Reg">Registration</h4>
+    </div>
+    </div>
+
+    <form action="register4.html">
+        <h4  style="font-family: Nerko One; font-size: 30px;">Emergancy Contact</h4>
+
+		<input type="text" name="FullName" id="FullName" placeholder="First and Last Name" style="width:500px; height:30px"required=""><br>
+
+	<input type="text" name="RelationsToChild" id="RelationsToChild" placeholder="Relationship to child" style="width:500px; height:30px"required=""><br>
+
+	<input type="tel" name="Cellphone" id="Cellphone" placeholder="Cellphone" style="width:500px; height:30px"required=""><br>
+
+    <button onclick="window.location.href='/register3.html'" >Next</button>
+    <button type="reset">Reset</button>
+    </form>
+
+    </body>
+
+</html>

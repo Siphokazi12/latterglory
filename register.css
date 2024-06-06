@@ -1,0 +1,81 @@
+.paragraph1{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.logo{
+	width:300px;
+	height:auto;
+	margin-right:auto;
+	margin-left: auto;
+}
+
+.pages{
+	margin-right: auto;
+	margin-left: auto;
+	font-size: 25px;
+	
+}
+
+.pages a{
+	padding: 10px;
+	color: black;
+	font-family:  "Nerko One", cursive;;
+}
+
+.pages a:hover{
+	font-size:45px;
+	color:pink;
+
+}
+
+.heading{
+  display: flex;
+  align-items: center;
+	justify-content: center;
+}
+.rainbow{
+  width:70px;
+  height:inherit;
+}
+
+.Reg{
+	font-family:  "Nerko One", cursive;
+  text-align: center;
+  font-size: 30px;
+}
+
+form{
+	text-align: center;
+	align-items: center;
+	justify-content: center;
+}
+
+button{
+	margin-top: 25px;
+	border-radius: 25px;
+	padding: 15px 32px;
+	border: none;
+	color: rgb(0, 0, 0);
+}
+
+input[type=text] {
+	background: transparent;
+	border: none;
+	border-bottom: 2px solid rgb(0, 0, 0);
+	padding: 2px;
+}
+
+input[type=date]{
+	background: transparent;
+	border: none;
+	border-bottom: 2px solid rgb(0, 0, 0);
+	padding: 2px;
+}
+
+body{
+	background-image:url("background.png");
+	background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}

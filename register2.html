@@ -1,0 +1,110 @@
+<html>
+    <header>
+    <meta charset="UTF-8">
+    <title>Registration:</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nerko+One&family=Permanent+Marker&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    
+    <style>
+      
+        .logo{
+            width:300px;
+	        height:auto;
+            display: block;
+            margin-left: auto;
+            margin-right:auto;
+        }
+
+        .Reg{
+            font-family: "nerko one";
+            font-size: 25px;
+            text-align: center;
+        }
+
+        form{
+            text-align: center;
+        }
+
+        input[type=text] {
+            background: transparent;
+            border: none;
+            border-bottom: 2px solid rgb(0, 0, 0);
+            padding: 2px;
+        }
+
+        input[type=tel] {
+            background: transparent;
+            border: none;
+            border-bottom: 2px solid rgb(0, 0, 0);
+            padding: 2px;
+        }
+
+        .history{
+            padding-right: 325px;
+        }
+
+       button{
+        margin-top: 25px;
+        border-radius: 25px;
+        padding: 15px 32px;
+        border: none;
+        color: rgb(0, 0, 0);
+       }
+
+       body{
+	background-image:url("background.png");
+	background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+
+    </style>
+    </header>
+
+    <body>
+        
+        <div class= paragraph1>
+            <img class="logo" src="logo.png" alt="logo">
+        </div>
+    
+    <div class="heading">
+    
+    <div>
+        <h4 class="Reg">Registration</h4>
+    </div>
+    </div>
+
+        <form action="register3.html">
+
+            <h4  style="font-family: Nerko One; font-size: 30px;">Child's Medical Information</h4>
+
+		<input type="text" name="MedicalAidName" id="MedicalAidName" placeholder="Enter the Name of Medical AID" style="width:500px; height:30px"required=""><br>
+
+		<input type="text" name="MedicalAidNo" id="MedicalAidNo" placeholder="Enter the Medical AID Number" style="width:500px; height:30px"required=""><br>
+
+		<input type="text" name="DocName" id="DocName" placeholder="Enter Doctor's Name" style="width:500px; height:30px"required=""><br>
+
+		<input type="tel" name="DocTelNo" id="DocTelNo" placeholder="Enter Doctor's Tel" style="width:500px; height:30px"required=""><br>
+
+        
+            <h4 class="history">Child's Medical History</h4>
+
+        <div style="padding-left:500px; text-align: left;">
+                <input type="radio" id="Measles" name="MedicalHistory" value="Measles">Measles<br>
+                <input type="radio" id="ChickenPocks" name="MedicalHistory" value="ChickenPocks">Chicken Pocks<br>
+                <input type="radio" id="ScareletFever" name="MedicalHistory" value="ScareletFever">Scarlet Fever<br>
+                <input type="radio" id="Mumps" name="MedicalHistory" value="Mumps">Mumps<br>
+                <input type="radio" id="Allergies" name="MedicalHistory" value="Allergies">Allergies(Please Specify)<br>
+        </div>
+
+		<input type="text" name="allergy" id="DocTelNo" placeholder="Enter allergy type *if any" style="width:500px; height:100px"><br>
+
+        
+
+        <button onclick="window.location.href='/register3.html'"> Next</button>
+        <button type="reset">Reset</button>
+        </form>
+    </body>
+</html>

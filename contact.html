@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latter Glory Day Care: Contact us</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nerko+One&family=Permanent+Marker&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+
+    <style>
+        .error {
+            color: red;
+        }
+
+        .paragraph1 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .logo {
+            width: 300px;
+            height: auto;
+            margin-right: auto;
+            margin-left: auto;
+        }
+
+        .pages {
+            margin-right: auto;
+            margin-left: auto;
+            font-size: 25px;
+        }
+
+        body {
+            align-items: center;
+            background-image: url("background.png");
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed; 
+        }
+
+        .heading {
+            display: flex;
+            justify-content: center;
+            align-self: start;
+        }
+
+        .emailphoto {
+            width: 200px;
+            height: 200px;
+            padding-bottom: 20px;
+            align-self: center;
+        }
+
+        .contact {
+            text-align: center;
+            font-size: 45px;
+            font-family: "Nerko One", cursive;
+            color: pink;
+        }
+
+        form {
+            text-align: center;
+            font-size: 25px;
+            word-spacing: 15px;
+        }
+        
+        input[type=text], input[type=email] {
+            background: transparent;
+            border: none;
+            border-bottom: 2px solid pink;
+            padding: 2px;
+        }
+
+        button {
+            background-origin: padding-box;
+            background-attachment: fixed;
+            background: #F8F8FF;
+            border-radius: 25px;
+            width: 70px;
+            height: 30px;
+        }
+
+        .name, .email, .subject, .message {
+            padding-bottom: 20px;
+            padding-left: 20px;
+        }
+
+        .pages a {
+            padding-left: 10px;
+            font-family: "Nerko One", cursive;
+            color: black;
+        }
+
+        .pages a:hover {
+            font-size: 45px;
+            color: pink;
+        }
+
+        .formarea {
+            display: flex;
+            gap: 90px;
+            padding-top: 50px;
+            padding-right: 200px;
+            align-items: center;
+            justify-content: center;
+            
+        }
+
+        .message textarea{
+            background: transparent;
+            border: none;
+            border-bottom: 2px solid pink;
+            padding: 2px;
+            padding-right: 78px;
+        }
+    </style>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            emailjs.init("oIwLaI7bVr-vP3USn");
+        })();
+    </script>
+    <script src="sendmail.js"></script>
+</head>
+
+<body>
+    <div class="paragraph1">
+        <img class="logo" src="logo.png" alt="logo">
+        <div class="pages">
+            <a href="latterglory.html">Home Page</a>
+            <a href="Aboutus.html">About us</a>
+            <a href="Programs.html">Programs</a>
+            <a href="Register.html">Register</a>
+        </div>
+    </div>
+
+    <div class="formarea">
+        <div class="heading">
+            <img class="emailphoto" src="emailphoto.png" alt="emailphoto">
+            <div class="contact">
+                <h4>Contact Us</h4>
+            </div>
+        </div>
+
+        <div id="error"></div>
+
+        <div class="form">
+            <form id="form" style="text-align: center;" action="contactthanks.html" onsubmit="return validateForm()">
+                <div class="name">
+                    <input type="text" id="name" name="name" placeholder="Name">
+                    <span id="nameError" class="error"></span>
+                </div>
+
+                <div class="email">
+                    <input type="email" id="email" name="email" placeholder="Email">
+                    <span id="emailError" class="error"></span>
+                </div>
+
+                <div class="subject">
+                    <input type="text" id="subject" name="subject" placeholder="Subject">
+                    <span id="subjectError" class="error"></span>
+                </div>
+
+                <div class="message">
+                    <textarea id="message" name="message" rows="10" cols="10" placeholder="Message"></textarea><br>
+                    <span id="messageError" class="error"></span>
+                </div>
+
+                <button class="submit" type="submit" name="submit" onclick="sendMail()">Submit</button>
+                <button class="reset" type="reset" name="reset">Reset</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function validateForm() {
+            var name = document.getElementById('name').value;
+            var email = document.getElementById('email').value;
+            var subject = document.getElementById('subject').value;
+            var message = document.getElementById('message').value;
+
+            var nameError = document.getElementById('nameError');
+            var emailError = document.getElementById('emailError');
+            var subjectError = document.getElementById('subjectError');
+            var messageError = document.getElementById('messageError');
+
+            // Reset error messages
+            nameError.innerHTML = '';
+            emailError.innerHTML = '';
+            subjectError.innerHTML = '';
+            messageError.innerHTML = '';
+
+            var isValid = true;
+
+            // Validate name
+            if (name === '') {
+                nameError.innerHTML = 'Name is required.';
+                isValid = false;
+            }
+
+            // Validate email
+            if (email === '') {
+                emailError.innerHTML = 'Email is required.';
+                isValid = false;
+            } else if (!isValidEmail(email)) {
+                emailError.innerHTML = 'Invalid email address.';
+                isValid = false;
+            }
+
+            // Validate subject
+            if (subject === '') {
+                subjectError.innerHTML = 'Subject is required.';
+                isValid = false;
+            }
+
+            // Validate message
+            if (message === '') {
+                messageError.innerHTML = 'Message is required.';
+                isValid = false;
+            }
+
+            return isValid;
+        }
+
+        function isValidEmail(email) {
+            // Regular expression for basic email validation
+            var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return emailRegex.test(email);
+        }
+    </script>
+
+    <hr style="color: pink;">
+
+    <h4>Other Links</h4>
+    <a href="latterglory.html">Home Page</a>
+    <a href="Aboutus.html">About us</a>
+    <a href="Programs.html">Programs</a>
+    <a href="Register.html">Register</a>
+</body>
+</html>

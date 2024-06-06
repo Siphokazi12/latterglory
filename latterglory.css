@@ -1,0 +1,157 @@
+.paragraph1{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.logo{
+	width:300px;
+	height:auto;
+	margin-right:auto;
+	margin-left: auto;
+}
+
+.pages{
+	margin-right: auto;
+	margin-left: auto;
+	font-size: 25px;
+	
+}
+
+.pages a{
+	padding-left: 10px;
+	font-family: "Nerko One", cursive;
+	color: black;
+}
+
+.pages a:hover{
+	font-size: 45px;
+	color: rgb(0, 110, 255);
+}
+
+.photorow, img{
+	display: flex;
+	width: auto;
+	height:270;
+	margin-right:auto;
+	margin-left: auto;
+
+}
+
+.introwithphoto{
+	display:flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.intro{
+	width: 500px;
+	height:400px;
+	font-size: 20px;
+	border-width: 40px;
+	margin-right:auto;
+	margin-left: auto;
+}
+
+.intro h4{
+	font-family: "Nerko One", cursive;
+	font-size: 25px;
+}
+.smallcrechphoto{
+	width: 600px;
+	margin-right:auto;
+	margin-left: auto;
+}
+
+.DiffPrograms1-3{
+	font-family: "Nerko One", cursive;
+	display: flex;
+	font-size: 20px;
+	margin-right:auto;
+	margin-left: auto;
+	align-items: center;
+	justify-content: center;
+	padding-top:30px;
+}
+
+.DiffPrograms4-5{
+	font-family: "Nerko One", cursive;
+	display: flex;
+	font-size: 20px;
+	margin-right:auto;
+	margin-left: auto;
+	align-items: center;
+	justify-content: center;
+	padding-top: 30px;
+}
+
+.programheading{
+	font-family: "Nerko One", cursive;
+}
+
+#Program1{
+	text-align: center;
+	font-size: 20;
+	font-weight: bold;
+	margin-right:auto;
+	margin-left: auto;
+}
+#Program2{
+	text-align: center;
+	font-size: 20;
+	font-weight: bold;
+	margin-right:auto;
+	margin-left: auto;
+}
+#Program3{
+	text-align: center;
+	font-size: 20;
+	font-weight: bold;
+	margin-right:auto;
+	margin-left: auto;
+}
+#Program4{
+	text-align: center;
+	font-size: 20;
+	font-weight: bold;
+	margin-right:auto;
+	margin-left: auto;
+}
+#Program5{
+	text-align: center;
+	font-size: 20;
+	font-weight: bold;
+	margin-right:auto;
+	margin-left: auto;
+}
+
+.FAQheading{
+	font-family: "Nerko One", cursive;
+}
+
+.FAQ{
+	align-items: center;
+	justify-content: center;
+}
+
+#Question{
+	text-align: center;
+	font-weight: bold;
+	font-size: 25px;
+}
+
+#Answer{
+	text-align: center;
+	font-size: 20px;
+}
+
+.lastphoto{
+	width: 900px;
+	height: inherit;
+}
+
+body{
+	background-image:url("bluebackground.png");
+	background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
